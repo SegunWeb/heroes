@@ -1,0 +1,11 @@
+.search-box {
+    max-width: 200px;
+    margin: 0 auto;
+}
+.search-box input {
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    background-color: transparent;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}

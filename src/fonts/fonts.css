@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'Masked Marvel';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Masked Marvel'), url('mask.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Masked Marvel Rotate';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Masked Marvel Rotate'), url('maskr.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Masked Marvel Expanded';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Masked Marvel Expanded'), url('maske.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Masked Marvel Condensed';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Masked Marvel Condensed'), url('maskc.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Masked Marvel Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Masked Marvel Italic'), url('maski.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Masked Marvel Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Masked Marvel Light'), url('maskl.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Masked Marvel Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Masked Marvel Bold'), url('maskb.woff') format('woff');
+}
