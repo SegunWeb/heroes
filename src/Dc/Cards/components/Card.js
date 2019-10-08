@@ -1,7 +1,6 @@
-// import React from 'react';
 import React, {Component} from 'react';
-import "./Card.css";
-import "../../fonts/fonts.css";
+import "./card.css";
+import "../../../fonts/fonts.css";
 import PropTypes from "prop-types";
 
 

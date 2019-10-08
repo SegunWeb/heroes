@@ -1,3 +1,21 @@
+html,
 body {
-    background-color: #fffbd2;
+    height: 100%;
+}
+* {
+    margin: 0;
+    padding: 0;}
+body {
+    background-color: #fff;
+}
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+main {
+    flex: 1 0 auto;
+}
+.footer {
+    flex: 0 0 auto;
 }

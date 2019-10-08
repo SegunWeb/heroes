@@ -1,0 +1,30 @@
+
+
+.header {
+    background-color: #ED1D24;
+    margin: 0 auto;
+    padding: 10px 20px;
+    width: 100%;
+}
+.header ul {
+    display: flex;
+    align-items: center;
+}
+.header ul li {
+    margin: 0 15px;
+    padding: 10px;
+    list-style: none;
+    cursor: pointer;
+}
+.header ul li a {
+    font-family: 'Masked Marvel Rotate';
+    color: white;
+    font-size: 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .2s;
+}
+.header ul li:hover a {
+    transition: .2s;
+    text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 1px 1px 1px #CCCCCC, 1px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 2px 1px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 3px 2px 1px #EEEEEE,4px 3px 1px #CCCCCC, 4px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 4px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC;
+}

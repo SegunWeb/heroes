@@ -2,20 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import '../fonts/fonts.css'
-import "./header.css"
+import "./footer.css"
 
-const Header = () => {
+const Footer = () => {
     return (
-        <nav className="header">
+        <nav className="footer">
             <ul>
                 <li><Link to='/'>Home</Link></li>
                 <li><Link to='/marvel'>Marvel</Link></li>
                 <li><Link to='/dc'>Dc</Link></li>
-                <li><Link to='/contacts'>Contacts</Link></li>
             </ul>
         </nav>
     )
-
 };
-
-export default Header;
+export default Footer;

@@ -1,26 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import App from './App/containers/App';
-import Routers from './Routers';
+import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import Home from "./Home"
-import Contacts from "./Contacts"
-import Posts from "./Posts"
+import Home from "./Home/Home"
+import Marvel from "./Marvel/Marvel"
+import Dc from "./Dc/Dc"
+import Contacts from "./Contacts/Contacts"
 
 import 'tachyons';
 import './index.css';
 
 ReactDOM.render(
     (<BrowserRouter>
-        {/*<App />*/}
-        <Routers>
+        <App>
             <Switch>
                 <Route exact path='/' component={Home} />
+                <Route path='/marvel' component={Marvel} />
+                <Route path='/dc' component={Dc} />
                 <Route path='/contacts' component={Contacts} />
-                <Route path='/posts' component={Posts} />
             </Switch>
-        </Routers>
+        </App>
     </BrowserRouter>), document.getElementById('root'));
 serviceWorker.unregister();

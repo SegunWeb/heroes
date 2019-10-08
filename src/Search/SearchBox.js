@@ -1,5 +1,5 @@
 import React from 'react';
-import "./SearchBox.css"
+import "./searchBox.css"
 
 const SearchBox = ({searchfield, searchChange }) => {
 

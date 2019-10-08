@@ -41,7 +41,7 @@ export const dc = [
     {
         id: 1,
         name: 'Batman',
-        history: 'Batman is a fictional superhero appearing in American comic books published by DC Comics. The character was created by artist Bob Kane and writer Bill Finger, and first appeared in Detective Comics #27 in 1939. ... Bruce Wayne trains himself physically and intellectually and crafts a bat-inspired persona to fight crime.',
+        history: 'Batman is a fictional superhero appearing in American comic books published by Dc Comics. The character was created by artist Bob Kane and writer Bill Finger, and first appeared in Detective Comics #27 in 1939. ... Bruce Wayne trains himself physically and intellectually and crafts a bat-inspired persona to fight crime.',
         imges: 'https://www.flaticon.com/premium-icon/icons/svg/663/663076.svg'
     },
     {

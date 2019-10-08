@@ -1,0 +1,21 @@
+.forms {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 4px;
+    border: 1px solid #000;
+}
+.forms *{
+    display: block;
+    margin: 20px auto;
+    width: 100%;
+}
+
+.forms input,
+.forms textarea {
+    padding: 10px;
+}
+.info {
+    max-width: 700px;
+    margin: 20px auto;
+}
