@@ -48,3 +48,19 @@
     background: rgb(255,174,174);
     background: linear-gradient(90deg, rgba(255,174,174,1) 41%, rgba(255,255,255,1) 100%);
 }
+.comment-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+label {
+    margin: 10px auto;
+}
+label > * {
+    display: block;
+    padding: 5px;
+    width: 250px;
+}

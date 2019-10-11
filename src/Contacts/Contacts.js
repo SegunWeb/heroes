@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 
 import "./contacts.css"
 
+
 const TABS_CITY = [
     {
         id: 1,
@@ -28,18 +29,13 @@ class Contacts extends Component {
         this.state = {
             nameText: '',
             textareaText: '',
-            selectCity: '',
-            showData: {
-                names: '',
-                text: '',
-                city: '',
-            }
+            selectCity: TABS_CITY[0].value,
         }
     }
 
-    handleNameChange = ({ target: {value} }) => {
+    handleNameChange = (e) => {
         this.setState({
-            nameText: value,
+            nameText: e.target.value,
         })
     };
     handleTextareaChange = ({ target: {value} }) => {
@@ -53,28 +49,14 @@ class Contacts extends Component {
         })
     };
 
-    handleShow = (e) => {
+    handleSub = (e) => {
         e.preventDefault();
         const {nameText, textareaText, selectCity} = this.state;
-
-
-        this.setState({
-            nameText: '',
-            textareaText: '',
-            selectCity: '',
-            showData: {
-                names: nameText,
-                text: textareaText,
-                city: selectCity,
-            }
-        });
-
+        alert(`${nameText}, ${selectCity}, ${textareaText}`)
     };
 
-
-
     render() {
-        const {nameText, textareaText } = this.state;
+        const {nameText, selectCity, textareaText } = this.state;
 
         return (
             <main>
@@ -83,7 +65,7 @@ class Contacts extends Component {
                     <p>Info</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda magnam molestias rerum tempore! Accusamus commodi in omnis, vel veritatis voluptatum?</p>
                 </div>
-                <form action="" className="forms">
+                <form onSubmit={this.handleSub} className="forms">
                     <label>
                         Name:
                         <input
@@ -94,9 +76,12 @@ class Contacts extends Component {
                             onChange={this.handleNameChange}
                         />
                     </label>
-                    <select name="city" id="city" onChange={this.handleCityChange}>
+                    <select value={selectCity} name="city" id="city" onChange={this.handleCityChange}>
                         {TABS_CITY.map(({ id, value, title }) => (
-                            <option key={`${id}-${value}`} value={value}>{title}</option>
+                            <option
+                                key={`${id}-${value}`}
+                                value={value}
+                            >{title}</option>
                             ))}
                     </select>
                     <label >
@@ -107,9 +92,10 @@ class Contacts extends Component {
                             value={textareaText}
                             pleaceholder="Your message"
                             onChange={this.handleTextareaChange}
-                        ></textarea>
+                        >
+                        </textarea>
                     </label>
-                    <button onClick={this.handleShow}>submit</button>
+                    <button>submit</button>
                 </form>
             </main>
         )
