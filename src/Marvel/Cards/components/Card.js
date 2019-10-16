@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import "./card.css";
 import "../../../fonts/fonts.css";
+import Comment from '../../../Commentaries/Comment'
 import PropTypes from "prop-types";
+
 
 
 class Card extends Component {
@@ -12,13 +14,6 @@ class Card extends Component {
         this.state = {
             count: 0,
             historyShow: false,
-            comments: '',
-            names: '',
-            comment: '',
-            sendComment: {
-                nameCom: '',
-                contCom: '',
-            }
         };
     }
 
@@ -33,40 +28,13 @@ class Card extends Component {
         this.setState({historyShow: !this.state.historyShow})
     };
 
-    handleName = ({ target: {value} }) => {
-        this.setState({
-            names: value
-        })
-    };
-    handleComment = (e) => {
-        this.setState({
-            comment: e.target.value,
-        })
-    };
-
-    handleSendComment = (e) => {
-        e.preventDefault();
-        const {names, comment} = this.state;
-
-        this.setState ({
-            names: '',
-            comment: '',
-            sendComment: {
-                nameCom: names,
-                contCom: comment,
-            }
-        })
-    };
-
-
 
     render() {
         const {name, history, imges} = this.props;
-        const {count, historyShow, names, comment, sendComment } = this.state;
+        const {count, historyShow } = this.state;
         const showElem = {
             'display': historyShow ? 'block' : 'none'
         };
-        const {nameCom, contCom} = sendComment;
 
         return (
             <div className="tc bg-light-green br3 pa3 bw2 shadow-5 my-flex">
@@ -83,23 +51,9 @@ class Card extends Component {
                         <img className="imgs" src="https://cdn4.iconfinder.com/data/icons/like-18/32/459-01-512.png" alt="like"/>
                         {count}
                     </p>
-                    <div className="comment-block">
-                        <label>
-                            Name: <input type="text" name="name" value={names} onChange={this.handleName}/>
-                        </label>
-                        <label htmlFor="">
-                            Your comment: <textarea value={comment} name="text" id="text" onChange={this.handleComment}></textarea>
-                        </label>
-                        <button onClick={this.handleSendComment}>send</button>
-                    </div>
+                    <Comment />
                 </div>
-                <div className="comments">
-                    <div>
-                        <p>{nameCom}</p>
-                        <p>{contCom}</p>
-                    </div>
 
-                </div>
             </div>
         )
     };

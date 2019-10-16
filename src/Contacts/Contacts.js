@@ -33,21 +33,33 @@ class Contacts extends Component {
         }
     }
 
-    handleNameChange = (e) => {
+    nameRef = React.createRef();
+    textareaRef = React.createRef();
+    cityRef = React.createRef();
+
+    handleCkick = () => {
         this.setState({
-            nameText: e.target.value,
+            nameRef: this.nameRef.current.value,
+            textareaRef: this.textareaRef.current.value,
+            cityRef: this.cityRef.current.value,
         })
     };
-    handleTextareaChange = ({ target: {value} }) => {
-        this.setState({
-            textareaText: value,
-        })
-    };
-    handleCityChange = ({ target: {value} }) => {
-        this.setState({
-            selectCity: value,
-        })
-    };
+
+    // handleNameChange = (e) => {
+    //     this.setState({
+    //         nameText: e.target.value,
+    //     })
+    // };
+    // handleTextareaChange = ({ target: {value} }) => {
+    //     this.setState({
+    //         textareaText: value,
+    //     })
+    // };
+    // handleCityChange = ({ target: {value} }) => {
+    //     this.setState({
+    //         selectCity: value,
+    //     })
+    // };
 
     handleSub = (e) => {
         e.preventDefault();
@@ -73,10 +85,15 @@ class Contacts extends Component {
                             name="name"
                             value={nameText}
                             pleaceholder="Your name"
-                            onChange={this.handleNameChange}
+                            onChange={this.handleCkick}
+                            ref={this.nameRef}
                         />
                     </label>
-                    <select value={selectCity} name="city" id="city" onChange={this.handleCityChange}>
+                    <select
+                        value={selectCity}
+                        name="city" id="city"
+                        onChange={this.handleCkick}
+                        ref={this.cityRef}>
                         {TABS_CITY.map(({ id, value, title }) => (
                             <option
                                 key={`${id}-${value}`}
@@ -91,7 +108,8 @@ class Contacts extends Component {
                             id="text"
                             value={textareaText}
                             pleaceholder="Your message"
-                            onChange={this.handleTextareaChange}
+                            onChange={this.handleCkick}
+                            ref={this.textareaRef}
                         >
                         </textarea>
                     </label>

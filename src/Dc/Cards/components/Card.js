@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import "./card.css";
 import "../../../fonts/fonts.css";
+import Comment from '../../../Commentaries/Comment'
 import PropTypes from "prop-types";
 
 
@@ -49,6 +50,7 @@ class Card extends Component {
                         <img className="imgs" src="https://cdn4.iconfinder.com/data/icons/like-18/32/459-01-512.png" alt="like"/>
                         {count}
                     </p>
+                    <Comment />
                 </div>
             </div>
         )

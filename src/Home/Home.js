@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Posts from "../Posts/Posts"
+import News from '../News/News'
 
 import './home.css'
 
@@ -20,7 +21,7 @@ const Home = () => (
                 </Link>
             </div>
         </div>
-
+        <News/>
         <Posts />
     </main>
 );

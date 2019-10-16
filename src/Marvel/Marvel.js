@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import CardList from './Cards/containers/CardList'
 import SearchBox from '../Search/SearchBox'
-
 import { marvel } from '../heroes';
 
 class Marvel extends Component {
